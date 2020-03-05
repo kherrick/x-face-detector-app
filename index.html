@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <title>x-face-detector-app - redirect service</title>
+  <meta charset="utf-8">
+  <meta name="Description" content="An app using TensorFlow.js as Web Components.">
+  <meta http-equiv="refresh" content="5; url=https://kherrick.github.io/tfjs-component-playground/">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#000000">
+
+  <base href="/x-face-detector-app/">
+  <script>
+    let newLocation = undefined
+
+    try {
+      newLocation = location.href.split('https://kherrick.github.io/x-face-detector-app/')[1]
+    } catch (e) { }
+
+    if (newLocation) {
+      location.href = `https://kherrick.github.io/tfjs-component-playground/${newLocation}`
+    } else {
+      location.href = 'https://kherrick.github.io/tfjs-component-playground/'
+    }
+  </script>
+</head>
+<body>redirecting...</body>
+</html>
